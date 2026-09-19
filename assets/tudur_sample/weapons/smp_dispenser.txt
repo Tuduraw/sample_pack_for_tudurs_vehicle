@@ -1,0 +1,10 @@
+; Half-track fire extinguisher: applies a water bucket effect around the impact point.
+DisplayName = Extinguisher
+Type = Dispenser
+DispenseItem = water_bucket
+DispenseRange = 4
+Acceleration = 2.0
+Gravity = -0.03
+Round = 5
+ReloadTime = 100
+Delay = 10

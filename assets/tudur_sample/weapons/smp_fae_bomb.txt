@@ -1,0 +1,14 @@
+; VTOL fuel-air bomb: big blast, flaming, but never breaks blocks (FAE).
+DisplayName = FAE Bomb
+Type = Bomb
+Power = 60
+Gravity = -0.05
+Round = 1
+ReloadTime = 1200
+Delay = 15
+Explosion = 7
+ExplosionBlock = 4
+FAE = true
+Flaming = true
+ModelBullet = bomb
+DisplayMortarDistance = true

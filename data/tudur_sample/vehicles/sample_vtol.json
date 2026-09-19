@@ -1,0 +1,296 @@
+{
+  "entity_type": "tudursvehiclemod:vtol",
+  "model": "tudur_sample:models/obj/sample_vtol.obj",
+  "texture": "tudur_sample:textures/vehicle/sample_vtol.png",
+  "display_name": "Sample Tiltrotor",
+  "scale": 1.0,
+  "width": 2.8,
+  "height": 3.4,
+  "max_speed": 1.8,
+  "acceleration": 0.05,
+  "turn_speed": 2.6,
+  "step_height": 1.0,
+  "gravity": -0.04,
+  "stall_speed": 0.3,
+  "float_capable": true,
+  "vtol_hover_speed_fraction": 0.15,
+  "engine_sound_volume": 3.0,
+  "throttle_up_down": 1.0,
+  "max_health": 140.0,
+  "armor_damage_factor": 0.8,
+  "damage_factor": 0.5,
+  "max_fuel": 800.0,
+  "fuel_consumption": 0.7,
+  "inventory_size": 18,
+  "hud": "sample_hud",
+  "engine_sound": "smp_engine_rotor",
+  "mob_drop_option": {
+    "rel_x": 0.0,
+    "rel_y": -0.5,
+    "rel_z": -3.8,
+    "interval_ticks": 15
+  },
+  "seats": [
+    {
+      "name": "pilot",
+      "offset_x": 0.0,
+      "offset_y": 0.6,
+      "offset_z": 3.2,
+      "driver": true,
+      "camera_positions": [
+        {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 3.6
+        },
+        {
+          "x": 0.0,
+          "y": 5.0,
+          "z": -12.0,
+          "force_camera": true
+        }
+      ]
+    },
+    {
+      "name": "copilot",
+      "offset_x": 0.0,
+      "offset_y": 0.6,
+      "offset_z": 2.4,
+      "driver": false
+    },
+    {
+      "name": "trooper_1",
+      "offset_x": -0.6,
+      "offset_y": 0.6,
+      "offset_z": 0.0,
+      "driver": false,
+      "enable_parachuting": true
+    },
+    {
+      "name": "trooper_2",
+      "offset_x": 0.6,
+      "offset_y": 0.6,
+      "offset_z": 0.0,
+      "driver": false,
+      "enable_parachuting": true
+    },
+    {
+      "name": "trooper_3",
+      "offset_x": -0.6,
+      "offset_y": 0.6,
+      "offset_z": -1.4,
+      "driver": false,
+      "enable_parachuting": true
+    },
+    {
+      "name": "trooper_4",
+      "offset_x": 0.6,
+      "offset_y": 0.6,
+      "offset_z": -1.4,
+      "driver": false,
+      "enable_parachuting": true
+    }
+  ],
+  "weapons": [
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_bomb",
+      "projectile_item": "minecraft:iron_block",
+      "offsets": [
+        {
+          "x": -0.3,
+          "y": 0.9,
+          "z": 0.4,
+          "linked_part": "$bomb_1"
+        },
+        {
+          "x": 0.3,
+          "y": 0.9,
+          "z": 0.4,
+          "linked_part": "$bomb_2"
+        }
+      ]
+    },
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_fae_bomb",
+      "projectile_item": "minecraft:iron_block",
+      "offsets": [
+        {
+          "x": 0.0,
+          "y": 0.8,
+          "z": -0.8
+        }
+      ]
+    },
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_missile",
+      "projectile_item": "minecraft:iron_ingot",
+      "offsets": [
+        {
+          "x": -3.0,
+          "y": 1.8,
+          "z": 0.5
+        },
+        {
+          "x": 3.0,
+          "y": 1.8,
+          "z": 0.5
+        }
+      ]
+    },
+    {
+      "seat_index": 1,
+      "weapon_name": "smp_mk_rocket",
+      "projectile_item": "minecraft:iron_ingot",
+      "pilot_usable": true,
+      "offsets": [
+        {
+          "x": -2.0,
+          "y": 1.8,
+          "z": 0.6
+        },
+        {
+          "x": 2.0,
+          "y": 1.8,
+          "z": 0.6
+        }
+      ]
+    }
+  ],
+  "ammo_parts": [
+    {
+      "part": "$bomb_1",
+      "weapon_name": "smp_bomb",
+      "slot_index": 1,
+      "display_penalty": "6, 4"
+    },
+    {
+      "part": "$bomb_2",
+      "weapon_name": "smp_bomb",
+      "slot_index": 0,
+      "display_penalty": "6, 4"
+    }
+  ],
+  "vtol_rotor_parts": [
+    {
+      "part": "$rotor_nacelle_l",
+      "pivot_x": -4.2,
+      "pivot_y": 2.1,
+      "pivot_z": 0.5,
+      "axis_x": -1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0
+    },
+    {
+      "part": "$rotor_nacelle_r",
+      "pivot_x": 4.2,
+      "pivot_y": 2.1,
+      "pivot_z": 0.5,
+      "axis_x": -1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0
+    }
+  ],
+  "spinning_parts": [
+    {
+      "part": "$prop_l",
+      "pivot_x": -4.2,
+      "pivot_y": 2.1,
+      "pivot_z": 1.5,
+      "axis_x": 0.0,
+      "axis_y": 0.0,
+      "axis_z": 1.0,
+      "speed": 60.0,
+      "vtol_rotor_parent": "$rotor_nacelle_l"
+    },
+    {
+      "part": "$prop_r",
+      "pivot_x": 4.2,
+      "pivot_y": 2.1,
+      "pivot_z": 1.5,
+      "axis_x": 0.0,
+      "axis_y": 0.0,
+      "axis_z": 1.0,
+      "speed": -60.0,
+      "vtol_rotor_parent": "$rotor_nacelle_r"
+    }
+  ],
+  "toggle_parts": [
+    {
+      "part": "$canopy",
+      "pivot_x": 0.0,
+      "pivot_y": 1.85,
+      "pivot_z": 2.4,
+      "mode": "rotate",
+      "axis_x": 1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0,
+      "max_angle": -55.0,
+      "trigger": "key",
+      "speed": 6.0
+    },
+    {
+      "part": "$hatch_ramp",
+      "pivot_x": 0.0,
+      "pivot_y": 0.4,
+      "pivot_z": -3.6,
+      "mode": "rotate",
+      "axis_x": 1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0,
+      "max_angle": -80.0,
+      "trigger": "key",
+      "speed": 3.0
+    },
+    {
+      "part": "$bay_door_l",
+      "pivot_x": -0.9,
+      "pivot_y": 0.62,
+      "pivot_z": 0.0,
+      "mode": "rotate",
+      "axis_x": 0.0,
+      "axis_y": 0.0,
+      "axis_z": 1.0,
+      "max_angle": -100.0,
+      "trigger": "weapon_bay",
+      "weapon_name": "smp_bomb",
+      "speed": 5.0
+    },
+    {
+      "part": "$bay_door_r",
+      "pivot_x": 0.9,
+      "pivot_y": 0.62,
+      "pivot_z": 0.0,
+      "mode": "rotate",
+      "axis_x": 0.0,
+      "axis_y": 0.0,
+      "axis_z": 1.0,
+      "max_angle": 100.0,
+      "trigger": "weapon_bay",
+      "weapon_name": "smp_bomb",
+      "speed": 5.0
+    }
+  ],
+  "nav_light_parts": [
+    {
+      "part": "$nav_light_l",
+      "pivot_x": -4.5,
+      "pivot_y": 2.5,
+      "pivot_z": 0.5,
+      "color_argb": -65536
+    },
+    {
+      "part": "$nav_light_r",
+      "pivot_x": 4.5,
+      "pivot_y": 2.5,
+      "pivot_z": 0.5,
+      "color_argb": -16711936
+    }
+  ],
+  "spawn_item": {
+    "display_name": "Sample Tiltrotor",
+    "tier": 4
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "entity_type": "tudursvehiclemod:helicopter",
+  "model": "tudur_sample:models/obj/sample_helicopter.obj",
+  "texture": "tudur_sample:textures/vehicle/sample_helicopter.png",
+  "display_name": "Sample Attack Helicopter",
+  "scale": 1.0,
+  "width": 2.2,
+  "height": 2.6,
+  "max_speed": 1.1,
+  "acceleration": 0.05,
+  "turn_speed": 3.2,
+  "step_height": 1.0,
+  "gravity": -0.04,
+  "on_ground_pitch": 0.0,
+  "reverse_throttle": 0.0,
+  "engine_sound_volume": 3.0,
+  "throttle_up_down": 1.2,
+  "throttle_switch_hold_ticks": 40,
+  "float_capable": true,
+  "max_health": 120.0,
+  "armor_damage_factor": 0.9,
+  "armor_min_damage": 1.0,
+  "armor_max_damage": 50.0,
+  "damage_factor": 0.5,
+  "max_fuel": 700.0,
+  "fuel_consumption": 0.6,
+  "inventory_size": 9,
+  "submerged_damage_height": 0.5,
+  "hud": "sample_hud",
+  "engine_sound": "smp_engine_rotor",
+  "passenger_display": {
+    "hide_entity": false,
+    "entity_width": 0.9,
+    "entity_height": 0.9
+  },
+  "force_bounding_box": true,
+  "regeneration": false,
+  "default_freelook": false,
+  "enable_ejection_seat": false,
+  "flare_type": 1,
+  "seats": [
+    {
+      "name": "pilot",
+      "offset_x": 0.0,
+      "offset_y": 0.5,
+      "offset_z": 2.2,
+      "driver": true,
+      "camera_positions": [
+        {
+          "x": 0.0,
+          "y": 1.7,
+          "z": 2.6
+        },
+        {
+          "x": 0.0,
+          "y": 5.0,
+          "z": -10.0,
+          "force_camera": true
+        }
+      ]
+    },
+    {
+      "name": "gunner",
+      "offset_x": 0.0,
+      "offset_y": 0.5,
+      "offset_z": 1.2,
+      "driver": false,
+      "camera_positions": [
+        {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 3.6,
+          "force_camera": true,
+          "fixed_pitch": -10.0
+        }
+      ]
+    },
+    {
+      "name": "passenger_l",
+      "offset_x": -0.5,
+      "offset_y": 0.5,
+      "offset_z": -0.2,
+      "driver": false,
+      "enable_parachuting": true
+    },
+    {
+      "name": "passenger_r",
+      "offset_x": 0.5,
+      "offset_y": 0.5,
+      "offset_z": -0.2,
+      "driver": false,
+      "enable_parachuting": true
+    }
+  ],
+  "weapons": [
+    {
+      "seat_index": 1,
+      "weapon_name": "smp_turret_gun",
+      "projectile_item": "minecraft:iron_nugget",
+      "pilot_usable": true,
+      "turret_rotation_speed": 90.0,
+      "offsets": [
+        {
+          "x": 0.0,
+          "y": 0.35,
+          "z": 4.4,
+          "linked_part": "$chin_turret"
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -110.0,
+        "max_yaw": 110.0,
+        "min_pitch": -60.0,
+        "max_pitch": 15.0
+      }
+    },
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_rockets",
+      "projectile_item": "minecraft:iron_ingot",
+      "offsets": [
+        {
+          "x": -2.0,
+          "y": 1.0,
+          "z": 0.9,
+          "mount_yaw": 0.0,
+          "mount_pitch": 2.0
+        },
+        {
+          "x": 2.0,
+          "y": 1.0,
+          "z": 0.9,
+          "mount_yaw": 0.0,
+          "mount_pitch": 2.0
+        }
+      ]
+    },
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_at_missile",
+      "projectile_item": "minecraft:iron_ingot",
+      "offsets": [
+        {
+          "x": -1.3,
+          "y": 0.85,
+          "z": 1.0,
+          "linked_part": "$missile_l1"
+        },
+        {
+          "x": 1.3,
+          "y": 0.85,
+          "z": 1.0,
+          "linked_part": "$missile_r1"
+        },
+        {
+          "x": -1.6,
+          "y": 0.85,
+          "z": 1.0,
+          "linked_part": "$missile_l2"
+        },
+        {
+          "x": 1.6,
+          "y": 0.85,
+          "z": 1.0,
+          "linked_part": "$missile_r2"
+        }
+      ]
+    }
+  ],
+  "ammo_parts": [
+    {
+      "part": "$missile_l1",
+      "weapon_name": "smp_at_missile",
+      "slot_index": 3,
+      "display_penalty": "3, 2"
+    },
+    {
+      "part": "$missile_r1",
+      "weapon_name": "smp_at_missile",
+      "slot_index": 2,
+      "display_penalty": "3, 2"
+    },
+    {
+      "part": "$missile_l2",
+      "weapon_name": "smp_at_missile",
+      "slot_index": 1,
+      "display_penalty": "3, 2"
+    },
+    {
+      "part": "$missile_r2",
+      "weapon_name": "smp_at_missile",
+      "slot_index": 0,
+      "display_penalty": "3, 2"
+    }
+  ],
+  "spinning_parts": [
+    {
+      "part": "$main_rotor",
+      "pivot_x": 0.0,
+      "pivot_y": 2.5,
+      "pivot_z": 0.5,
+      "axis_x": 0.0,
+      "axis_y": 1.0,
+      "axis_z": 0.0,
+      "speed": 55.0
+    },
+    {
+      "part": "$tail_rotor",
+      "pivot_x": 0.35,
+      "pivot_y": 2.0,
+      "pivot_z": -6.3,
+      "axis_x": 1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0,
+      "speed": 80.0
+    }
+  ],
+  "toggle_parts": [
+    {
+      "part": "$canopy",
+      "pivot_x": 0.0,
+      "pivot_y": 1.6,
+      "pivot_z": 1.2,
+      "mode": "rotate",
+      "axis_x": 1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0,
+      "max_angle": -70.0,
+      "trigger": "key",
+      "speed": 6.0
+    },
+    {
+      "part": "$hatch_door_l",
+      "pivot_x": -0.85,
+      "pivot_y": 1.0,
+      "pivot_z": -0.3,
+      "mode": "slide",
+      "offset_x": 0.0,
+      "offset_y": 0.0,
+      "offset_z": -1.1,
+      "trigger": "key",
+      "speed": 4.0
+    },
+    {
+      "part": "$light_hatch",
+      "pivot_x": 0.0,
+      "pivot_y": 0.1,
+      "pivot_z": 1.3,
+      "mode": "rotate",
+      "axis_x": 1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0,
+      "max_angle": 90.0,
+      "trigger": "light_hatch",
+      "speed": 8.0
+    }
+  ],
+  "weapon_parts": [
+    {
+      "part": "$chin_turret",
+      "seat_index": 1,
+      "weapon_name": "smp_turret_gun",
+      "pilot_fallback": true,
+      "hide_for_gunner": false,
+      "yaw_follow": true,
+      "pitch_follow": true,
+      "pivot_x": 0.0,
+      "pivot_y": 0.35,
+      "pivot_z": 3.0,
+      "recoil_distance": 0.1,
+      "aim_range": {
+        "min_yaw": -110.0,
+        "max_yaw": 110.0,
+        "min_pitch": -60.0,
+        "max_pitch": 15.0
+      }
+    }
+  ],
+  "search_light_parts": [
+    {
+      "part": "$search_light",
+      "pivot_x": 0.0,
+      "pivot_y": 0.3,
+      "pivot_z": 1.5,
+      "start_color_argb": -1,
+      "end_color_argb": 0,
+      "length": 40.0,
+      "end_radius": 8.0,
+      "yaw": 0.0,
+      "pitch": -20.0,
+      "steer_angle": 0.0,
+      "follow_mode": "PILOT_VIEW"
+    }
+  ],
+  "nav_light_parts": [
+    {
+      "part": "$nav_light_l",
+      "pivot_x": -2.3,
+      "pivot_y": 1.3,
+      "pivot_z": 0.2,
+      "color_argb": -65536
+    },
+    {
+      "part": "$nav_light_r",
+      "pivot_x": 2.3,
+      "pivot_y": 1.3,
+      "pivot_z": 0.2,
+      "color_argb": -16711936
+    }
+  ],
+  "spawn_item": {
+    "display_name": "Sample Attack Helicopter",
+    "tier": 3
+  }
+}

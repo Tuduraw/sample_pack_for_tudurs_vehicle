@@ -1,0 +1,24 @@
+; Aircraft air-to-air missile. Locks only on airborne targets.
+DisplayName = AA Missile
+Type = AAMissile
+Power = 45
+DamageFactor = plane, 1.5
+DamageFactor = heli, 1.5
+Acceleration = 3.8
+Gravity = 0.0
+Round = 2
+ReloadTime = 900
+Delay = 30
+MaxAmmo = 4
+SuppliedNum = 2
+Item = 5, iron_ingot
+Item = 3, redstone
+Explosion = 3
+LockTime = 30
+RigidityTime = 5
+ProximityFuseDist = 3.0
+Sight = MissileSight
+ModelBullet = missile
+TrajectoryParticle = smoke
+Sound = smp_launch
+SoundVolume = 3.0

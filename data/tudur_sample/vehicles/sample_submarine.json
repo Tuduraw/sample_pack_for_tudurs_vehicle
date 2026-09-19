@@ -1,0 +1,140 @@
+{
+  "entity_type": "tudursvehiclemod:submarine",
+  "model": "tudur_sample:models/obj/sample_submarine.obj",
+  "texture": "tudur_sample:textures/vehicle/sample_submarine.png",
+  "display_name": "Sample Attack Submarine",
+  "scale": 1.0,
+  "width": 4.0,
+  "height": 6.0,
+  "max_speed": 0.8,
+  "dive_max_speed": 0.45,
+  "acceleration": 0.02,
+  "turn_speed": 0.9,
+  "gravity": -0.04,
+  "reverse_throttle": -0.3,
+  "weight_type": "tank",
+  "engine_sound_volume": 1.5,
+  "throttle_switch_hold_ticks": 40,
+  "max_health": 600.0,
+  "armor_damage_factor": 0.6,
+  "damage_factor": 0.2,
+  "max_fuel": 3000.0,
+  "fuel_consumption": 0.8,
+  "inventory_size": 18,
+  "submerged_damage_height": 60.0,
+  "hud": "sample_hud",
+  "engine_sound": "smp_engine_boat",
+  "passenger_display": {
+    "hide_entity": true,
+    "entity_width": 1.0,
+    "entity_height": 1.0
+  },
+  "seats": [
+    {
+      "name": "captain",
+      "offset_x": 0.0,
+      "offset_y": 3.5,
+      "offset_z": 2.0,
+      "driver": true,
+      "camera_positions": [
+        {
+          "x": 0.0,
+          "y": 7.6,
+          "z": 1.5,
+          "force_camera": true
+        },
+        {
+          "x": 0.0,
+          "y": 12.0,
+          "z": -30.0,
+          "force_camera": true,
+          "fixed_yaw": 0.0,
+          "fixed_pitch": 15.0
+        }
+      ]
+    },
+    {
+      "name": "crew",
+      "offset_x": 0.0,
+      "offset_y": 2.0,
+      "offset_z": -2.0,
+      "driver": false
+    }
+  ],
+  "weapons": [
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_torpedo",
+      "projectile_item": "minecraft:iron_ingot",
+      "offsets": [
+        {
+          "x": -0.6,
+          "y": 1.2,
+          "z": 14.0,
+          "linked_part": "$torpedo_l"
+        },
+        {
+          "x": 0.6,
+          "y": 1.2,
+          "z": 14.0,
+          "linked_part": "$torpedo_r"
+        }
+      ]
+    }
+  ],
+  "ammo_parts": [
+    {
+      "part": "$torpedo_l",
+      "weapon_name": "smp_torpedo",
+      "slot_index": 1
+    },
+    {
+      "part": "$torpedo_r",
+      "weapon_name": "smp_torpedo",
+      "slot_index": 0
+    }
+  ],
+  "spinning_parts": [
+    {
+      "part": "$screw",
+      "pivot_x": 0.0,
+      "pivot_y": 1.5,
+      "pivot_z": -14.3,
+      "axis_x": 0.0,
+      "axis_y": 0.0,
+      "axis_z": 1.0,
+      "speed": 20.0
+    }
+  ],
+  "toggle_parts": [
+    {
+      "part": "$hatch_top",
+      "pivot_x": 0.0,
+      "pivot_y": 5.1,
+      "pivot_z": 2.9,
+      "mode": "rotate",
+      "axis_x": 1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0,
+      "max_angle": -100.0,
+      "trigger": "key",
+      "speed": 6.0
+    },
+    {
+      "part": "$periscope",
+      "pivot_x": 0.0,
+      "pivot_y": 5.8,
+      "pivot_z": 1.5,
+      "mode": "slide",
+      "offset_x": 0.0,
+      "offset_y": -1.4,
+      "offset_z": 0.0,
+      "trigger": "key",
+      "speed": 3.0
+    }
+  ],
+  "spawn_item": {
+    "display_name": "Sample Attack Submarine",
+    "tier": 4
+  }
+}

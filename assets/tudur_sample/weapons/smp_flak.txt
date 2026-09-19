@@ -1,0 +1,33 @@
+; Static emplacement twin flak. Airburst (ExplosionAltitude) + cluster submunitions,
+; range readout, fixed camera pitch. Slow projectile so the arc is visible.
+DisplayName = 40mm Flak (Cluster)
+Type = MachineGun1
+Power = 12
+Acceleration = 3.5
+Gravity = -0.01
+Accuracy = 0.5
+Round = 8
+ReloadTime = 60
+Delay = 8
+MaxAmmo = 200
+SuppliedNum = 40
+Item = 4, iron_ingot
+Item = 2, gunpowder
+Explosion = 2
+ExplosionBlock = 1
+ExplosionAltitude = 6
+Bomblet = 6
+BombletSTime = 30
+BombletDiff = 0.6
+ModelBomblet = shell
+ModelBullet = shell
+TrajectoryParticle = smoke
+TrajectoryParticleStartTick = 4
+DisableSmoke = false
+BulletColor = 255, 255, 120, 60
+DisplayMortarDistance = true
+CasTargetMode = Collision
+FixCameraPitch = false
+Sound = smp_launch
+SoundVolume = 3.0
+Recoil = 0.6

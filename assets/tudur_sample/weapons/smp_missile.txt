@@ -1,0 +1,17 @@
+; VTOL general-purpose lock-on missile (no air/ground filtering).
+DisplayName = Multi-role Missile
+Type = Missile
+Power = 40
+Acceleration = 3.5
+Gravity = 0.0
+Round = 2
+ReloadTime = 600
+Delay = 30
+Explosion = 3
+LockTime = 35
+RigidityTime = 6
+ProximityFuseDist = 2.5
+Sight = MissileSight
+ModelBullet = missile
+TrajectoryParticle = smoke
+Sound = smp_launch

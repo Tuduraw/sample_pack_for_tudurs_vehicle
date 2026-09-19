@@ -1,0 +1,9 @@
+; Half-track commander's targeting pod: spots vehicles/monsters/players in a 45deg cone.
+DisplayName = Targeting Pod
+Type = TargetingPod
+Target = planes/helicopters/vehicles/monsters/players
+Length = 120
+Radius = 45
+MarkTime = 12
+Delay = 20
+Zoom = 2.0, 4.0

@@ -1,0 +1,9 @@
+; UAV self-destruct charge. Destruct only works on an unmanned helicopter (the sample UAV).
+DisplayName = Self-destruct
+Type = Bomb
+Power = 40
+Gravity = -0.05
+Round = 1
+Explosion = 4
+ExplosionBlock = 2
+Destruct = true

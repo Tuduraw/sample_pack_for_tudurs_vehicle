@@ -1,0 +1,26 @@
+; Submarine torpedo. Usable while submerged, guided to the aim point, cruises at TargetDepth.
+DisplayName = Heavy Torpedo
+Type = Torpedo
+Power = 80
+Acceleration = 1.5
+Gravity = -0.03
+GravityInWater = 0.0
+AccelerationInWater = 2.5
+VelocityInWater = 0.25
+TargetDepth = 3.0
+GuidedTorpedo = true
+UsableWhileDiving = true
+Round = 2
+ReloadTime = 900
+Delay = 40
+MaxAmmo = 6
+SuppliedNum = 2
+Item = 8, iron_ingot
+Item = 4, gunpowder
+Explosion = 5
+ExplosionInWater = 7
+BulletColorInWater = 255, 25, 25, 75
+ModelBullet = torpedo
+Sound = smp_launch
+SoundVolume = 2.0
+SoundPitch = 0.6

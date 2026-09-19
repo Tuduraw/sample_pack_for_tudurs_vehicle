@@ -1,0 +1,32 @@
+; Carrier launch weapon on the sample ship. Launches sample_aircraft off the deck with a catapult
+; boost, flies a patrol/attack loop, and returns to land on the deck (2-ship Delta formation).
+DisplayName = Launch Fighter
+Type = Carrier
+CarrierAircraft = sample_aircraft
+CarrierWeaponIndex = 0
+CarrierAccuracy = 2.0
+CarrierTimeout = 400
+CarrierStuckTimeout = 40
+CarrierYawOffset = 0
+CarrierLandingYawOffset = 0
+CarrierTargetYawOffset = 0
+CasTargetMode = Collision
+CasAttackStartAltitude = 150
+CasAttackStopAltitude = 30
+CarrierLaunchWaypoint = 0,6,70,100,1,-,220
+CarrierLaunchWaypoint = 0,40,180,90,-,-,-
+CarrierWaypoint = 0,90,400,80,false
+CarrierWaypoint = 0,90,700,80,true
+CarrierWaypoint = 120,90,400,80,false
+CarrierLandingWaypoint = 0,60,-260,40,1,0,-
+CarrierLandingWaypoint = 0,20,-90,25,-,-,-
+CarrierLandingToAmmoRadius = 18.0
+CarrierRecoveryPoint = -4,0,-18,8.0
+CarrierFormationSize = 2
+CarrierFormationType = Delta
+CarrierFormationSpacing = 12.0
+CarrierFormationElementSpacing = 30.0
+Round = 2
+MaxAmmo = 4
+ReloadTime = 600
+Delay = 60

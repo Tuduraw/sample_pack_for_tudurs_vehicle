@@ -1,0 +1,204 @@
+{
+  "entity_type": "tudursvehiclemod:static_emplacement",
+  "model": "tudur_sample:models/obj/sample_emplacement.obj",
+  "texture": "tudur_sample:textures/vehicle/sample_emplacement.png",
+  "display_name": "Sample Flak Emplacement",
+  "scale": 1.0,
+  "width": 3.0,
+  "height": 3.0,
+  "gravity": -0.04,
+  "max_health": 300.0,
+  "armor_damage_factor": 0.6,
+  "armor_min_damage": 3.0,
+  "damage_factor": 0.3,
+  "max_fuel": 100.0,
+  "fuel_consumption": 0.0,
+  "inventory_size": 9,
+  "regeneration": true,
+  "default_freelook": true,
+  "hud": "sample_hud",
+  "seats": [
+    {
+      "name": "gunner",
+      "offset_x": 0.0,
+      "offset_y": 1.0,
+      "offset_z": -0.4,
+      "driver": true,
+      "camera_positions": [
+        {
+          "x": 0.0,
+          "y": 2.6,
+          "z": -0.2,
+          "force_camera": true
+        },
+        {
+          "x": 0.0,
+          "y": 5.0,
+          "z": -6.0,
+          "force_camera": true
+        }
+      ]
+    },
+    {
+      "name": "loader",
+      "offset_x": 0.9,
+      "offset_y": 1.2,
+      "offset_z": -1.2,
+      "driver": false
+    }
+  ],
+  "weapons": [
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_flak",
+      "projectile_item": "minecraft:iron_nugget",
+      "turret_rotation_speed": 50.0,
+      "offsets": [
+        {
+          "x": -0.35,
+          "y": 1.85,
+          "z": 3.0,
+          "linked_part": "$gun_cradle"
+        },
+        {
+          "x": 0.35,
+          "y": 1.85,
+          "z": 3.0,
+          "linked_part": "$gun_cradle"
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -180.0,
+        "max_yaw": 180.0,
+        "min_pitch": -85.0,
+        "max_pitch": 5.0
+      }
+    },
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_tv_missile",
+      "projectile_item": "minecraft:iron_ingot",
+      "offsets": [
+        {
+          "x": 0.0,
+          "y": 2.4,
+          "z": 0.0,
+          "mount_pitch": 20.0
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -180.0,
+        "max_yaw": 180.0,
+        "min_pitch": -85.0,
+        "max_pitch": 5.0
+      }
+    },
+    {
+      "seat_index": 1,
+      "weapon_name": "smp_cas",
+      "projectile_item": "minecraft:paper",
+      "pilot_usable": true,
+      "offsets": [
+        {
+          "x": 1.2,
+          "y": 3.0,
+          "z": -1.2
+        }
+      ]
+    },
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_dummy",
+      "projectile_item": "minecraft:stone",
+      "offsets": [
+        {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        }
+      ]
+    }
+  ],
+  "weapon_parts": [
+    {
+      "part": "$turret",
+      "seat_index": 0,
+      "weapon_name": "smp_flak",
+      "yaw_follow": true,
+      "pitch_follow": false,
+      "pivot_x": 0.0,
+      "pivot_y": 1.6,
+      "pivot_z": 0.0
+    },
+    {
+      "part": "$turret_shield",
+      "seat_index": 0,
+      "weapon_name": "smp_flak",
+      "yaw_follow": true,
+      "pitch_follow": false,
+      "pivot_x": 0.0,
+      "pivot_y": 1.6,
+      "pivot_z": 0.0
+    },
+    {
+      "part": "$gun_cradle",
+      "seat_index": 0,
+      "weapon_name": "smp_flak",
+      "yaw_follow": false,
+      "pitch_follow": true,
+      "pivot_x": 0.0,
+      "pivot_y": 1.8,
+      "pivot_z": 0.6,
+      "recoil_distance": 0.25,
+      "child_info": {
+        "parent_yaw_follow": true,
+        "parent_pitch_follow": false,
+        "parent_pivot_x": 0.0,
+        "parent_pivot_y": 1.6,
+        "parent_pivot_z": 0.0
+      },
+      "aim_range": {
+        "min_yaw": -180.0,
+        "max_yaw": 180.0,
+        "min_pitch": -85.0,
+        "max_pitch": 5.0
+      }
+    }
+  ],
+  "toggle_parts": [
+    {
+      "part": "$hatch_ammo",
+      "pivot_x": -1.5,
+      "pivot_y": 0.8,
+      "pivot_z": -1.2,
+      "mode": "rotate",
+      "axis_x": 0.0,
+      "axis_y": 0.0,
+      "axis_z": 1.0,
+      "max_angle": -110.0,
+      "trigger": "key",
+      "speed": 5.0
+    }
+  ],
+  "search_light_parts": [
+    {
+      "part": "$search_light",
+      "pivot_x": 1.0,
+      "pivot_y": 1.1,
+      "pivot_z": 1.2,
+      "start_color_argb": -1,
+      "end_color_argb": 0,
+      "length": 60.0,
+      "end_radius": 10.0,
+      "yaw": 0.0,
+      "pitch": 20.0,
+      "follow_mode": "PILOT_VIEW"
+    }
+  ],
+  "spawn_item": {
+    "display_name": "Sample Flak Emplacement",
+    "tier": 2
+  }
+}

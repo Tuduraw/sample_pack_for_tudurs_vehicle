@@ -1,0 +1,7 @@
+1
+$roller1_l 0.5305165
+$roller2_l 0.53051645
+$roller3_l 0.5305165
+$roller1_r 0.5305165
+$roller2_r 0.53051645
+$roller3_r 0.5305165

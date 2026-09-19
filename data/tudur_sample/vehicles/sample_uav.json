@@ -1,0 +1,111 @@
+{
+  "entity_type": "tudursvehiclemod:helicopter",
+  "model": "tudur_sample:models/obj/sample_uav.obj",
+  "texture": "tudur_sample:textures/vehicle/sample_uav.png",
+  "display_name": "Sample Quadcopter UAV",
+  "scale": 1.0,
+  "width": 1.2,
+  "height": 0.9,
+  "max_speed": 0.9,
+  "acceleration": 0.08,
+  "turn_speed": 5.0,
+  "gravity": -0.04,
+  "max_health": 20.0,
+  "max_fuel": 300.0,
+  "fuel_consumption": 0.3,
+  "is_uav": true,
+  "is_target_drone": true,
+  "hud": "sample_hud",
+  "engine_sound": "smp_engine_rotor",
+  "engine_sound_volume": 1.0,
+  "passenger_display": {
+    "hide_entity": true,
+    "entity_width": 0.5,
+    "entity_height": 0.5
+  },
+  "seats": [
+    {
+      "name": "operator",
+      "offset_x": 0.0,
+      "offset_y": 0.6,
+      "offset_z": 0.0,
+      "driver": true
+    }
+  ],
+  "weapons": [
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_kamikaze",
+      "projectile_item": "minecraft:tnt",
+      "offsets": [
+        {
+          "x": 0.0,
+          "y": 0.2,
+          "z": 0.0
+        }
+      ]
+    }
+  ],
+  "spinning_parts": [
+    {
+      "part": "$rotor_fl",
+      "pivot_x": -0.9,
+      "pivot_y": 0.7,
+      "pivot_z": 0.9,
+      "axis_x": 0.0,
+      "axis_y": 1.0,
+      "axis_z": 0.0,
+      "speed": 70.0
+    },
+    {
+      "part": "$rotor_fr",
+      "pivot_x": 0.9,
+      "pivot_y": 0.7,
+      "pivot_z": 0.9,
+      "axis_x": 0.0,
+      "axis_y": 1.0,
+      "axis_z": 0.0,
+      "speed": -70.0
+    },
+    {
+      "part": "$rotor_rl",
+      "pivot_x": -0.9,
+      "pivot_y": 0.7,
+      "pivot_z": -0.9,
+      "axis_x": 0.0,
+      "axis_y": 1.0,
+      "axis_z": 0.0,
+      "speed": -70.0
+    },
+    {
+      "part": "$rotor_rr",
+      "pivot_x": 0.9,
+      "pivot_y": 0.7,
+      "pivot_z": -0.9,
+      "axis_x": 0.0,
+      "axis_y": 1.0,
+      "axis_z": 0.0,
+      "speed": 70.0
+    }
+  ],
+  "toggle_parts": [
+    {
+      "part": "$hatch_bay",
+      "pivot_x": 0.0,
+      "pivot_y": 0.18,
+      "pivot_z": -0.25,
+      "mode": "rotate",
+      "axis_x": 1.0,
+      "axis_y": 0.0,
+      "axis_z": 0.0,
+      "max_angle": 90.0,
+      "trigger": "weapon_bay",
+      "weapon_name": "smp_kamikaze",
+      "speed": 8.0
+    }
+  ],
+  "spawn_item": {
+    "display_name": "Sample Quadcopter UAV",
+    "tier": 1
+  }
+}

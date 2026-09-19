@@ -1,0 +1,25 @@
+; Half-track turret gun (seat 1, pilot fallback). Heavy recoil animation and slow, fine pitch aiming.
+DisplayName = 12.7mm HMG
+Type = MachineGun2
+Power = 9
+Acceleration = 8.0
+Gravity = -0.02
+Accuracy = 1.5
+Round = 100
+ReloadTime = 120
+Delay = 3
+MaxAmmo = 800
+SuppliedNum = 100
+Item = 3, iron_ingot
+Item = 2, gunpowder
+Item = 1, redstone
+Piercing = 2
+Sound = smp_gun
+SoundVolume = 2.5
+SoundPitch = 0.8
+ModelBullet = shell
+Recoil = 1.1
+RecoilBufCount = 40, 5
+CameraRotationSpeedPitch = 0.4
+AddMuzzleFlash = 0.9, 0.35, 1, 200, 254, 219, 184
+SetCartridge = cartridge, 0.08, 90, 10, 1.5, -0.04, 0.5

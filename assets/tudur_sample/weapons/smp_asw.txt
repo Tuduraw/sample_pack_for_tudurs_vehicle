@@ -1,0 +1,26 @@
+; Ship anti-submarine rocket-torpedo. Flies to the aim point, dives at DiveDistance, then cruises as a torpedo.
+DisplayName = ASW Rocket
+Type = ASWeapon
+Power = 55
+Acceleration = 3.0
+Gravity = -0.01
+Round = 2
+ReloadTime = 600
+Delay = 30
+MaxAmmo = 8
+SuppliedNum = 2
+Item = 6, iron_ingot
+Item = 4, gunpowder
+DiveDistance = 12.0
+AccelerationInWater = 2.0
+VelocityInWater = 0.3
+TargetDepth = 4.0
+GravityInWater = 0.0
+Explosion = 4
+ExplosionInWater = 6
+BulletColor = 255, 230, 230, 230
+BulletColorInWater = 255, 40, 80, 160
+ModelBullet = torpedo
+TrajectoryParticle = largesmoke
+Sound = smp_launch
+SoundVolume = 3.0

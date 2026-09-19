@@ -1,0 +1,27 @@
+; Ship close-in gun (turret, seat 2). Magazine + reserve + resupply items, HE mode switch,
+; and RotationSpeed for the spins_while_firing barrel part.
+DisplayName = CIWS 20mm
+Type = MachineGun2
+Power = 5
+Acceleration = 10.0
+Gravity = -0.01
+Accuracy = 0.8
+Round = 300
+ReloadTime = 200
+Delay = 1
+MaxAmmo = 1500
+SuppliedNum = 300
+Item = 2, iron_ingot
+Item = 1, gunpowder
+ModeNum = 2
+Explosion = 1
+ExplosionBlock = 0
+TimeFuse = 80
+RotationSpeed = 30
+Sound = smp_gun
+SoundVolume = 1.5
+SoundDelay = 1
+ModelBullet = shell
+BulletColor = 255, 255, 200, 80
+AddMuzzleFlash = 1.0, 0.3, 1, 200, 254, 219, 184
+DisplayMortarDistance = true

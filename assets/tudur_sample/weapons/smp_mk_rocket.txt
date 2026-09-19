@@ -1,0 +1,13 @@
+; VTOL unguided-style aim-point rocket (MkRocket behaves like ASMissile).
+DisplayName = Mk Rocket
+Type = MkRocket
+Power = 30
+Acceleration = 3.0
+Gravity = -0.03
+Round = 6
+ReloadTime = 200
+Delay = 6
+Explosion = 3
+ModelBullet = rocket
+TrajectoryParticle = flame
+Sound = smp_launch

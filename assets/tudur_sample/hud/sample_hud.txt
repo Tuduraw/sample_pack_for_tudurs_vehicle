@@ -1,0 +1,75 @@
+; sample_hud.txt - main HUD script for every sample vehicle.
+; Uses every drawing command + If/EndIf + Call so the syntax is all demonstrated in one place.
+Color = 255, 60, 255, 90
+DrawGraduationYaw = yaw, 0, -90
+DrawGraduationPitch1 = pitch, -150, 0
+DrawGraduationPitch2 = pitch, roll, 0, 0
+DrawCameraRot = 0, 70
+
+; --- left column: speed / altitude ---
+DrawString = -120, -40, "SPD %.0f km/h", speed_kbh
+DrawString = -120, -30, "ALT %.0f", altitude
+DrawString = -120, -20, "SEA %.0f", sea_alt
+DrawString = -120, -10, "THR %.2f", throttle
+
+; --- right column: health / fuel ---
+DrawString = 90, -40, "HP %.0f / %.0f", hp, max_hp
+DrawRect = 90, -28, 50, 4
+Color = 255, 255, 255, 255
+DrawRect = 90, -28, hp_rto * 50, 4
+Color = 255, 60, 255, 90
+DrawString = 90, -20, "FUEL %.0f%%", fuel * 100
+If = low_fuel == 1
+  Color = 255, 255, 80, 40
+  DrawCenteredString = 0, 40, "LOW FUEL", 
+  Color = 255, 60, 255, 90
+EndIf
+
+; --- weapon block ---
+DrawString = -120, 40, "%s", wpn_name
+DrawString = -120, 50, "AMMO %d / %d", wpn_ammo, wpn_rm_ammo
+If = reloading == 1
+  DrawString = -120, 60, "RELOAD %d", reload_time
+EndIf
+If = is_heat_wpn == 1
+  DrawString = -120, 60, "HEAT", 
+  DrawRect = -110, 62, wpn_heat * 40, 4
+EndIf
+If = has_modes == 1
+  DrawString = -120, 70, "MODE %d", wpn_mode
+EndIf
+If = has_mortar_distance == 1
+  DrawString = -120, 80, "RNG %s", mortar_distance_str
+EndIf
+If = locked == 1
+  Color = 255, 255, 60, 60
+  DrawCenteredString = 0, -60, "LOCK", 
+  Color = 255, 60, 255, 90
+EndIf
+If = lock_progress > 0
+  DrawRect = -20, -50, lock_progress * 40, 3
+EndIf
+
+; --- flags ---
+If = stalling == 1
+  Color = 255, 255, 60, 60
+  DrawCenteredString = 0, 30, "STALL", 
+  Color = 255, 60, 255, 90
+EndIf
+If = gear_deployed == 1
+  DrawString = 90, 40, "GEAR DOWN", 
+EndIf
+If = manual_mode == 1
+  DrawString = 90, 50, "MANUAL", 
+EndIf
+If = free_look == 1
+  DrawString = 90, 60, "FREELOOK", 
+EndIf
+
+; --- turret needle (rotating texture) + line indicator ---
+DrawTexture = "sample_needle", -8, 92, 16, 16, 0, 0, 16, 16, gun_yaw
+DrawLineStipple = 1, 2, -60, 110, 60, 110
+DrawRect = gun_yaw - 1, 106, 2, 8
+DrawString = 0, 114, "GUN %.0f / %.0f", gun_yaw, gun_pitch
+
+Call = sample_compass

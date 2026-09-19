@@ -1,0 +1,15 @@
+; Ship stern depth charges - the Depth type sinks through the surface and detonates below.
+DisplayName = Depth Charge
+Type = Depth
+Power = 35
+Gravity = -0.03
+Round = 2
+ReloadTime = 200
+Delay = 10
+MaxAmmo = 12
+SuppliedNum = 2
+Item = 4, iron_ingot
+Item = 3, gunpowder
+Explosion = 2
+ExplosionInWater = 5
+ModelBullet = bomb

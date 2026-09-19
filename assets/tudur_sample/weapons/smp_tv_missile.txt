@@ -1,0 +1,16 @@
+; Emplacement TV-guided missile (pilot steers it after launch). ModeNum 2 = normal guided mode.
+DisplayName = TV Missile
+Type = TVMissile
+Power = 55
+Acceleration = 2.5
+Gravity = 0.0
+Round = 2
+ReloadTime = 800
+Delay = 30
+Explosion = 4
+ExplosionBlock = 2
+ModeNum = 2
+ModelBullet = missile
+TrajectoryParticle = largesmoke
+Sound = smp_launch
+SoundVolume = 3.0

@@ -1,0 +1,7 @@
+; Aircraft wingtip smoke generators (air-show trail).
+DisplayName = Smoke Trail
+Type = Smoke
+SmokeColor = 200, 255, 255, 255
+SmokeSize = 2.5
+SmokeMaxAge = 400
+Delay = 1

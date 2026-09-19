@@ -1,0 +1,24 @@
+; Emplacement CAS call. Launches a 3-ship VFormation of sample_aircraft from the marked point.
+DisplayName = Call Airstrike
+Type = CAS
+CasAircraft = sample_aircraft
+CasWeaponIndex = 0
+CasAccuracy = 2.0
+CasTimeout = 90
+CasStuckTimeout = 30
+CasYawOffset = 0
+CasTargetMode = Collision
+CasAttackStartAltitude = 120
+CasAttackStopAltitude = 30
+CasWaypoint = 0,90,-220,90,false
+CasWaypoint = 0,50,-60,70,true
+CasWaypoint = 0,40,40,70,true
+CasWaypoint = 0,90,220,90,false
+CasFormationSize = 3
+CasFormationType = VFormation
+CasFormationSpacing = 10.0
+CasFormationElementSpacing = 24.0
+DisplayMortarDistance = true
+Round = 3
+ReloadTime = 1200
+Delay = 100

@@ -1,0 +1,323 @@
+{
+  "entity_type": "tudursvehiclemod:ship",
+  "model": "tudur_sample:models/obj/sample_ship.obj",
+  "texture": "tudur_sample:textures/vehicle/sample_ship.png",
+  "display_name": "Sample Light Carrier",
+  "scale": 1.0,
+  "width": 16.0,
+  "height": 12.0,
+  "max_speed": 0.9,
+  "acceleration": 0.01,
+  "turn_speed": 0.5,
+  "step_height": 0.0,
+  "gravity": -0.04,
+  "reverse_throttle": -0.25,
+  "weight_type": "tank",
+  "engine_sound_volume": 3.0,
+  "throttle_up_down": 0.5,
+  "throttle_switch_hold_ticks": 60,
+  "max_health": 2000.0,
+  "armor_damage_factor": 0.5,
+  "armor_min_damage": 5.0,
+  "armor_max_damage": 200.0,
+  "damage_factor": 0.2,
+  "max_fuel": 5000.0,
+  "fuel_consumption": 1.5,
+  "inventory_size": 54,
+  "submerged_damage_height": 3.0,
+  "fuel_supply_range": 30.0,
+  "ammo_supply_range": 30.0,
+  "health_supply_range": 30.0,
+  "wake_trail_spread_distance": 14.0,
+  "wake_trail_duration_ticks": 400,
+  "hud": "sample_hud",
+  "engine_sound": "smp_engine_boat",
+  "runways": [
+    {
+      "width": 15.0,
+      "center_x": 0.0,
+      "height_y": 4.6,
+      "start_z": -30.0,
+      "end_z": 30.0
+    },
+    {
+      "width": 5.0,
+      "center_x": -4.0,
+      "height_y": 4.65,
+      "start_z": -21.0,
+      "end_z": -15.0,
+      "hatch_offset_x": 0.0,
+      "hatch_offset_y": -6.0,
+      "hatch_offset_z": 0.0,
+      "hatch_move_speed": 2.0
+    },
+    {
+      "width": 3.0,
+      "center_x": 0.0,
+      "height_y": 2.0,
+      "start_z": 34.0,
+      "end_z": 38.0,
+      "hatch_gated": true
+    }
+  ],
+  "seats": [
+    {
+      "name": "captain",
+      "offset_x": 6.5,
+      "offset_y": 8.8,
+      "offset_z": -3.0,
+      "driver": true,
+      "camera_positions": [
+        {
+          "x": 6.5,
+          "y": 9.2,
+          "z": -2.6
+        },
+        {
+          "x": 0.0,
+          "y": 30.0,
+          "z": -60.0,
+          "force_camera": true,
+          "fixed_pitch": 25.0
+        }
+      ]
+    },
+    {
+      "name": "asw_operator",
+      "offset_x": 4.5,
+      "offset_y": 6.2,
+      "offset_z": 23.0,
+      "driver": false,
+      "camera_positions": [
+        {
+          "x": 4.5,
+          "y": 7.0,
+          "z": 22.0,
+          "force_camera": true
+        }
+      ]
+    },
+    {
+      "name": "ciws_gunner",
+      "offset_x": -4.5,
+      "offset_y": 6.0,
+      "offset_z": 23.0,
+      "driver": false
+    }
+  ],
+  "weapons": [
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_carrier",
+      "projectile_item": "minecraft:feather",
+      "offsets": [
+        {
+          "x": 0.0,
+          "y": 4.7,
+          "z": -12.0,
+          "mount_yaw": 0.0,
+          "mount_pitch": 0.0
+        }
+      ]
+    },
+    {
+      "seat_index": 1,
+      "weapon_name": "smp_asw",
+      "projectile_item": "minecraft:iron_ingot",
+      "pilot_usable": true,
+      "turret_rotation_speed": 40.0,
+      "offsets": [
+        {
+          "x": 4.5,
+          "y": 6.2,
+          "z": 25.6,
+          "linked_part": "$asw_launcher"
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -150.0,
+        "max_yaw": 150.0,
+        "min_pitch": 5.0,
+        "max_pitch": 60.0
+      }
+    },
+    {
+      "seat_index": 2,
+      "weapon_name": "smp_ciws",
+      "projectile_item": "minecraft:iron_nugget",
+      "pilot_usable": true,
+      "turret_rotation_speed": 120.0,
+      "offsets": [
+        {
+          "x": -4.5,
+          "y": 5.2,
+          "z": 25.7,
+          "linked_part": "$ciws_gun"
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -180.0,
+        "max_yaw": 180.0,
+        "min_pitch": -10.0,
+        "max_pitch": 85.0
+      }
+    },
+    {
+      "seat_index": 0,
+      "weapon_name": "smp_depth_charge",
+      "projectile_item": "minecraft:iron_block",
+      "offsets": [
+        {
+          "x": -4.0,
+          "y": 5.5,
+          "z": -28.5,
+          "mount_yaw": 180.0,
+          "linked_part": "$dc_1"
+        },
+        {
+          "x": -4.0,
+          "y": 5.5,
+          "z": -28.5,
+          "mount_yaw": 180.0,
+          "linked_part": "$dc_2"
+        }
+      ]
+    }
+  ],
+  "ammo_parts": [
+    {
+      "part": "$dc_1",
+      "weapon_name": "smp_depth_charge",
+      "slot_index": 1
+    },
+    {
+      "part": "$dc_2",
+      "weapon_name": "smp_depth_charge",
+      "slot_index": 0
+    }
+  ],
+  "spinning_parts": [
+    {
+      "part": "$radar",
+      "pivot_x": 6.5,
+      "pivot_y": 11.6,
+      "pivot_z": -6.0,
+      "axis_x": 0.0,
+      "axis_y": 1.0,
+      "axis_z": 0.0,
+      "speed": 4.0
+    }
+  ],
+  "toggle_parts": [
+    {
+      "part": "$hatch_elevator",
+      "pivot_x": -4.0,
+      "pivot_y": 4.55,
+      "pivot_z": -18.0,
+      "mode": "slide",
+      "offset_x": 0.0,
+      "offset_y": -6.0,
+      "offset_z": 0.0,
+      "trigger": "key",
+      "speed": 2.0
+    },
+    {
+      "part": "$canopy",
+      "pivot_x": 6.5,
+      "pivot_y": 8.6,
+      "pivot_z": -2.2,
+      "mode": "slide",
+      "offset_x": 0.0,
+      "offset_y": 0.0,
+      "offset_z": 0.0,
+      "trigger": "key",
+      "speed": 1.0
+    }
+  ],
+  "weapon_parts": [
+    {
+      "part": "$asw_launcher",
+      "seat_index": 1,
+      "weapon_name": "smp_asw",
+      "pilot_fallback": true,
+      "yaw_follow": true,
+      "pitch_follow": true,
+      "pivot_x": 4.5,
+      "pivot_y": 5.2,
+      "pivot_z": 24.0,
+      "aim_range": {
+        "min_yaw": -150.0,
+        "max_yaw": 150.0,
+        "min_pitch": 5.0,
+        "max_pitch": 60.0
+      }
+    },
+    {
+      "part": "$ciws",
+      "seat_index": 2,
+      "weapon_name": "smp_ciws",
+      "pilot_fallback": true,
+      "yaw_follow": true,
+      "pitch_follow": false,
+      "pivot_x": -4.5,
+      "pivot_y": 5.0,
+      "pivot_z": 24.0
+    },
+    {
+      "part": "$ciws_gun",
+      "seat_index": 2,
+      "weapon_name": "smp_ciws",
+      "pilot_fallback": true,
+      "yaw_follow": false,
+      "pitch_follow": true,
+      "spins_while_firing": true,
+      "pivot_x": -4.5,
+      "pivot_y": 5.2,
+      "pivot_z": 24.4,
+      "child_info": {
+        "parent_yaw_follow": true,
+        "parent_pitch_follow": false,
+        "parent_pivot_x": -4.5,
+        "parent_pivot_y": 5.0,
+        "parent_pivot_z": 24.0
+      }
+    }
+  ],
+  "search_light_parts": [
+    {
+      "part": "$search_light",
+      "pivot_x": 6.5,
+      "pivot_y": 9.2,
+      "pivot_z": -3.0,
+      "start_color_argb": -1,
+      "end_color_argb": 0,
+      "length": 80.0,
+      "end_radius": 12.0,
+      "yaw": 0.0,
+      "pitch": -10.0,
+      "follow_mode": "FIXED"
+    }
+  ],
+  "nav_light_parts": [
+    {
+      "part": "$nav_light_l",
+      "pivot_x": 8.0,
+      "pivot_y": 5.0,
+      "pivot_z": 26.0,
+      "color_argb": -65536
+    },
+    {
+      "part": "$nav_light_r",
+      "pivot_x": -8.0,
+      "pivot_y": 5.0,
+      "pivot_z": 26.0,
+      "color_argb": -16711936
+    }
+  ],
+  "spawn_item": {
+    "display_name": "Sample Light Carrier",
+    "tier": 5
+  }
+}

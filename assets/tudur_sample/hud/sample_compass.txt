@@ -1,0 +1,11 @@
+; sample_compass.txt - sub-script called from sample_hud.txt.
+; Draws a small position readout box at the bottom-left and exits.
+Color = 255, 200, 200, 200
+DrawLine = -220, 100, -160, 100, -160, 120, -220, 120, -220, 100
+DrawString = -216, 102, "X %.0f", pos_x
+DrawString = -216, 110, "Z %.0f", pos_z
+If = time > 13000
+  DrawString = -216, 44, "NIGHT", 
+EndIf
+Exit
+DrawString = 0, 0, "never drawn (after Exit)",

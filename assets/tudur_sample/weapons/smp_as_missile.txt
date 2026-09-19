@@ -1,0 +1,19 @@
+; Aircraft internal-bay air-to-surface missile (aim-point guided, no lock). Grouped with the gun.
+DisplayName = AS Missile (Bay)
+Type = ASMissile
+Group = Nose
+Power = 50
+Acceleration = 3.2
+Gravity = -0.02
+Round = 2
+ReloadTime = 700
+Delay = 25
+MaxAmmo = 2
+Explosion = 5
+ExplosionBlock = 3
+ModelBullet = missile
+TrajectoryParticle = largesmoke
+DisplayMortarDistance = true
+CasTargetMode = Collision
+Sound = smp_launch
+SoundVolume = 3.0
