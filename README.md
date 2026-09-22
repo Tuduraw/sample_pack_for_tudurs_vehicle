@@ -1,6 +1,6 @@
 # サンプルパック (tudur_sample)
 
-Tudur's Vehicle Mod の全乗り物タイプ・全武器タイプを網羅した、動作するサンプル
+Tudur's Vehicle Mod(https://github.com/Tuduraw/tudursvehiclemod) の全乗り物タイプ・全武器タイプを網羅した、動作するサンプル
 アドオンパックです。`tudursvehiclemod-addons/` 配下にこのフォルダごと配置し、
 `/reload` で読み込まれます。モデルは箱を組み合わせたローポリ、テクスチャは
 単色スウォッチ(キャノピー部分のみ半透明)です。細部の調整はご自由にどうぞ。
